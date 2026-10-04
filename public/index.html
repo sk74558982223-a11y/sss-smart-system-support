@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSS Smart System Support - Global Print-On-Demand</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">🖨️</div>
+        <h1>SSS Print</h1>
+      </div>
+      <nav class="nav">
+        <a href="#" class="nav-link active">📊 Dashboard</a>
+        <a href="#" class="nav-link">🛒 Orders</a>
+        <a href="#" class="nav-link">🎨 Designs</a>
+        <a href="#" class="nav-link">📦 Products</a>
+        <a href="#" class="nav-link">💬 Messages</a>
+        <a href="#" class="nav-link">🌍 Countries</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="header">
+        <h2>Global Print-On-Demand Platform</h2>
+        <p>AI-Powered Automation for 200+ Countries</p>
+      </header>
+
+      <section class="dashboard">
+        <div class="grid">
+          <div class="card stat-card">
+            <div class="stat-label">Total Orders</div>
+            <div class="stat-value">1,245</div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-label">Global Revenue</div>
+            <div class="stat-value">$87,450</div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-label">Countries Active</div>
+            <div class="stat-value">42</div>
+          </div>
+          <div class="card stat-card">
+            <div class="stat-label">Avg Profit Margin</div>
+            <div class="stat-value">38%</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panels">
+        <div class="card panel">
+          <h3>📦 Products</h3>
+          <div id="productsList"></div>
+        </div>
+
+        <div class="card panel">
+          <h3>💬 Message Templates</h3>
+          <div id="messagesList"></div>
+        </div>
+      </section>
+
+      <section class="panels">
+        <div class="card panel wide">
+          <h3>💰 Price Quote Calculator</h3>
+          <form id="quoteForm" class="form">
+            <div class="form-row">
+              <label>
+                Base Price ($)
+                <input type="number" id="basePrice" value="100" step="0.01" required>
+              </label>
+              <label>
+                Quantity
+                <input type="number" id="quantity" value="10" min="1" required>
+              </label>
+              <label>
+                Margin %
+                <input type="number" id="marginPercent" value="40" step="0.01" required>
+              </label>
+              <label>
+                Country
+                <select id="country" required>
+                  <option value="US">🇺🇸 United States (USD)</option>
+                  <option value="GB">🇬🇧 United Kingdom (GBP)</option>
+                  <option value="IN">🇮🇳 India (INR)</option>
+                  <option value="DE">🇩🇪 Germany (EUR)</option>
+                  <option value="AU">🇦🇺 Australia (AUD)</option>
+                </select>
+              </label>
+            </div>
+            <button type="submit" class="btn-primary">Calculate Price</button>
+          </form>
+          <div id="quoteResult" class="quote-result"></div>
+        </div>
+      </section>
+
+      <section class="panels">
+        <div class="card panel wide">
+          <h3>🛒 Create New Order</h3>
+          <form id="orderForm" class="form">
+            <div class="form-row">
+              <label>
+                Customer Name
+                <input type="text" id="customerName" placeholder="John Doe" required>
+              </label>
+              <label>
+                Product
+                <select id="productSelect" required>
+                  <option>T-Shirt</option>
+                  <option>Board/Banner</option>
+                  <option>Hoodie</option>
+                  <option>Cap</option>
+                  <option>Mug</option>
+                </select>
+              </label>
+              <label>
+                Quantity
+                <input type="number" id="orderQuantity" value="1" min="1" required>
+              </label>
+              <label>
+                Country
+                <select id="orderCountry" required>
+                  <option value="US">🇺🇸 United States</option>
+                  <option value="GB">🇬🇧 United Kingdom</option>
+                  <option value="IN">🇮🇳 India</option>
+                  <option value="DE">🇩🇪 Germany</option>
+                  <option value="AU">🇦🇺 Australia</option>
+                </select>
+              </label>
+            </div>
+            <button type="submit" class="btn-primary">Create Order</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="footer">
+        <p>SSS Smart System Support - Global Print Automation Platform</p>
+        <p>Serving 200+ countries with AI-powered automation</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
